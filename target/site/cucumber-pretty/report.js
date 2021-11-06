@@ -67,7 +67,7 @@ formatter.examples({
       "cells": [
         "kofi",
         "mamba",
-        "mytesting619@gmail.com",
+        "mytesting621@gmail.com",
         "Mamba123",
         "Mamba123"
       ],
@@ -102,7 +102,7 @@ formatter.step({
 });
 formatter.step({
   "line": 7,
-  "name": "I enter \"kofi\" \"mamba\" \"mytesting619@gmail.com\" \"Mamba123\" \"Mamba123\"",
+  "name": "I enter \"kofi\" \"mamba\" \"mytesting621@gmail.com\" \"Mamba123\" \"Mamba123\"",
   "matchedColumns": [
     0,
     1,
@@ -126,7 +126,7 @@ formatter.match({
   "location": "AccountManagementSteps.iAmOnCreateAnAccountPage()"
 });
 formatter.result({
-  "duration": 13682486200,
+  "duration": 11984075200,
   "status": "passed"
 });
 formatter.match({
@@ -140,7 +140,7 @@ formatter.match({
       "offset": 16
     },
     {
-      "val": "mytesting619@gmail.com",
+      "val": "mytesting621@gmail.com",
       "offset": 24
     },
     {
@@ -155,21 +155,22 @@ formatter.match({
   "location": "AccountManagementSteps.iEnter(String,String,String,String,String)"
 });
 formatter.result({
-  "duration": 4719900,
+  "duration": 822451900,
   "status": "passed"
 });
 formatter.match({
   "location": "AccountManagementSteps.iClickOnCreateAnAccount()"
 });
 formatter.result({
-  "duration": 47100,
+  "duration": 2205883301,
   "status": "passed"
 });
 formatter.match({
   "location": "AccountManagementSteps.accountCreationIsSuccessful()"
 });
 formatter.result({
-  "duration": 33100,
-  "status": "passed"
+  "duration": 52427000,
+  "error_message": "org.junit.ComparisonFailure: expected:\u003cMy Accou[]\u003e but was:\u003cMy Accou[nt]\u003e\r\n\tat org.junit.Assert.assertEquals(Assert.java:115)\r\n\tat org.junit.Assert.assertEquals(Assert.java:144)\r\n\tat com.lamtech.luma.stepDefinition.AccountManagementSteps.accountCreationIsSuccessful(AccountManagementSteps.java:50)\r\n\tat ✽.Then Account creation is successful(AccountManagement.feature:9)\r\n",
+  "status": "failed"
 });
 });

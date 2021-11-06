@@ -10,4 +10,4 @@ Feature: Account Management
 
     Examples:
       | firstname | lastname | email                  | password | confirmPassword |
-      | kofi      | mamba    | mytesting619@gmail.com | Mamba123 | Mamba123        |
+      | kofi      | mamba    | mytesting621@gmail.com | Mamba123 | Mamba123        |
