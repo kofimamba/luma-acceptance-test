@@ -13,75 +13,69 @@ formatter.feature({
   ]
 });
 formatter.scenarioOutline({
-  "line": 5,
-  "name": "create an account with valid e-mail",
+  "line": 17,
+  "name": "login into account with a valid email",
   "description": "",
-  "id": "account-management;create-an-account-with-valid-e-mail",
+  "id": "account-management;login-into-account-with-a-valid-email",
   "type": "scenario_outline",
   "keyword": "Scenario Outline",
   "tags": [
     {
-      "line": 4,
-      "name": "@createAccount"
+      "line": 16,
+      "name": "@accountLogin"
     }
   ]
 });
 formatter.step({
-  "line": 6,
-  "name": "I am on create an account page",
+  "line": 18,
+  "name": "I am on login page",
   "keyword": "Given "
 });
 formatter.step({
-  "line": 7,
-  "name": "I enter \"\u003cfirstname\u003e\" \"\u003clastname\u003e\" \"\u003cemail\u003e\" \"\u003cpassword\u003e\" \"\u003cconfirmPassword\u003e\"",
+  "line": 19,
+  "name": "I enter \"\u003cemail\u003e\" \"\u003cpassword\u003e\"",
   "keyword": "When "
 });
 formatter.step({
-  "line": 8,
-  "name": "I click on create an account",
+  "line": 20,
+  "name": "I click on sign in",
   "keyword": "And "
 });
 formatter.step({
-  "line": 9,
-  "name": "Account creation is successful",
+  "line": 21,
+  "name": "Account dashboard should display successfully",
   "keyword": "Then "
 });
 formatter.examples({
-  "line": 11,
+  "line": 23,
   "name": "",
   "description": "",
-  "id": "account-management;create-an-account-with-valid-e-mail;",
+  "id": "account-management;login-into-account-with-a-valid-email;",
   "rows": [
     {
       "cells": [
-        "firstname",
-        "lastname",
         "email",
-        "password",
-        "confirmPassword"
+        "password"
       ],
-      "line": 12,
-      "id": "account-management;create-an-account-with-valid-e-mail;;1"
+      "line": 24,
+      "id": "account-management;login-into-account-with-a-valid-email;;1"
     },
     {
       "cells": [
-        "kofi",
-        "mamba",
         "mytesting621@gmail.com",
-        "Mamba123",
         "Mamba123"
       ],
-      "line": 13,
-      "id": "account-management;create-an-account-with-valid-e-mail;;2"
+      "line": 25,
+      "id": "account-management;login-into-account-with-a-valid-email;;2"
     }
   ],
   "keyword": "Examples"
 });
 formatter.scenario({
-  "line": 13,
-  "name": "create an account with valid e-mail",
+  "line": 25,
+  "name": "login into account with a valid email",
   "description": "",
-  "id": "account-management;create-an-account-with-valid-e-mail;;2",
+  "id": "account-management;login-into-account-with-a-valid-email;;2",
   "type": "scenario",
   "keyword": "Scenario Outline",
   "tags": [
@@ -90,87 +84,71 @@ formatter.scenario({
       "name": "@accountManagement"
     },
     {
-      "line": 4,
-      "name": "@createAccount"
+      "line": 16,
+      "name": "@accountLogin"
     }
   ]
 });
 formatter.step({
-  "line": 6,
-  "name": "I am on create an account page",
+  "line": 18,
+  "name": "I am on login page",
   "keyword": "Given "
 });
 formatter.step({
-  "line": 7,
-  "name": "I enter \"kofi\" \"mamba\" \"mytesting621@gmail.com\" \"Mamba123\" \"Mamba123\"",
+  "line": 19,
+  "name": "I enter \"mytesting621@gmail.com\" \"Mamba123\"",
   "matchedColumns": [
     0,
-    1,
-    2,
-    3,
-    4
+    1
   ],
   "keyword": "When "
 });
 formatter.step({
-  "line": 8,
-  "name": "I click on create an account",
+  "line": 20,
+  "name": "I click on sign in",
   "keyword": "And "
 });
 formatter.step({
-  "line": 9,
-  "name": "Account creation is successful",
+  "line": 21,
+  "name": "Account dashboard should display successfully",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "AccountManagementSteps.iAmOnCreateAnAccountPage()"
+  "location": "AccountManagementSteps.iAmOnLoginPage()"
 });
 formatter.result({
-  "duration": 11984075200,
+  "duration": 13694790300,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "kofi",
+      "val": "mytesting621@gmail.com",
       "offset": 9
     },
     {
-      "val": "mamba",
-      "offset": 16
-    },
-    {
-      "val": "mytesting621@gmail.com",
-      "offset": 24
-    },
-    {
       "val": "Mamba123",
-      "offset": 49
-    },
-    {
-      "val": "Mamba123",
-      "offset": 60
+      "offset": 34
     }
   ],
-  "location": "AccountManagementSteps.iEnter(String,String,String,String,String)"
+  "location": "AccountManagementSteps.iEnter(String,String)"
 });
 formatter.result({
-  "duration": 822451900,
+  "duration": 469665400,
   "status": "passed"
 });
 formatter.match({
-  "location": "AccountManagementSteps.iClickOnCreateAnAccount()"
+  "location": "AccountManagementSteps.iClickOnSignIn()"
 });
 formatter.result({
-  "duration": 2205883301,
+  "duration": 2165408700,
   "status": "passed"
 });
 formatter.match({
-  "location": "AccountManagementSteps.accountCreationIsSuccessful()"
+  "location": "AccountManagementSteps.accountDashboardShouldDisplaySuccessfully()"
 });
 formatter.result({
-  "duration": 52427000,
-  "error_message": "org.junit.ComparisonFailure: expected:\u003cMy Accou[]\u003e but was:\u003cMy Accou[nt]\u003e\r\n\tat org.junit.Assert.assertEquals(Assert.java:115)\r\n\tat org.junit.Assert.assertEquals(Assert.java:144)\r\n\tat com.lamtech.luma.stepDefinition.AccountManagementSteps.accountCreationIsSuccessful(AccountManagementSteps.java:50)\r\n\tat ✽.Then Account creation is successful(AccountManagement.feature:9)\r\n",
-  "status": "failed"
+  "duration": 109015700,
+  "status": "passed"
 });
 });

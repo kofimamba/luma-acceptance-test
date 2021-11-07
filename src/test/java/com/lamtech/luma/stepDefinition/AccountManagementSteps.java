@@ -49,4 +49,40 @@ public class AccountManagementSteps {
         String actualPageTitle = driver.getTitle();
         Assert.assertEquals(expectedPageTitle, actualPageTitle);
     }
+
+
+    @Given("^I am on login page$")
+    public void iAmOnLoginPage() {
+        //define browser
+        WebDriverManager.chromedriver().setup();
+        //open browser
+        driver = new ChromeDriver();
+        //maximise browser windows
+        driver.manage().window().maximize();
+        //launch application
+        driver.get("https://demo-m2.bird.eu/");
+        //click on create an account link
+        driver.findElement(By.linkText("Sign In")).click();
+    }
+
+    @When("^I enter \"([^\"]*)\" \"([^\"]*)\"$")
+    public void iEnter(String email, String password) throws Throwable {
+        driver.findElement(By.name("login[username]")).sendKeys(email);
+        driver.findElement(By.name("login[password]")).sendKeys(password);
+
+    }
+
+    @And("^I click on sign in$")
+    public void iClickOnSignIn() {
+        driver.findElement(By.cssSelector("#send2 > span")).click();
+    }
+
+    @Then("^Account dashboard should display successfully$")
+    public void accountDashboardShouldDisplaySuccessfully() {
+        String expectedPageTitle = "Home Page";
+        String actualPageTitle = driver.getTitle();
+        Assert.assertEquals(expectedPageTitle, actualPageTitle);
+    }
 }
+
+
